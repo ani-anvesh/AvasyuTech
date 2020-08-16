@@ -1,0 +1,155 @@
+.grids {
+  align-items: center;
+  padding: 2vh;
+  background-color: #0099ff;
+  max-height: 100%;
+}
+.images > img {
+  width: 100%;
+  margin: auto;
+  max-height: 45vh;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+.review {
+  max-width: 90%;
+  max-height: 63%;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 4vh;
+  padding: 4vh 2vh;
+}
+.score {
+  max-height: 100%;
+  text-align: center;
+}
+.score > h1 {
+  font-size: 3.6em;
+  margin: 1vh;
+  color: #422057ff;
+}
+.score > h2 {
+  font-size: 2em;
+  margin: 1vh;
+}
+.score > img {
+  max-height: 70%;
+  max-width: 70%;
+  border-radius: 50%;
+  margin-top: 3vh;
+}
+
+@media screen and (min-width: 540px) {
+  * {
+    font-size: 16px;
+  }
+
+  .grids {
+    align-items: center;
+    padding: 2vh;
+    background-color: hsl(204, 100%, 50%, 0.7);
+    height: 100%;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  .review {
+    max-width: 100%;
+    max-height: 63%;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 1vh;
+    padding: 4vh 2vh;
+  }
+  .score {
+    max-height: 100%;
+    text-align: center;
+  }
+  .score > h1 {
+    font-size: 3.6em;
+    margin: 1vh;
+    color: #422057ff;
+  }
+  .score > h2 {
+    font-size: 2em;
+    margin: 1vh;
+  }
+  .image > img {
+    width: 70%;
+    max-height: 45vh;
+    margin: auto;
+  }
+
+  .image > img {
+    max-width: 30%;
+    max-height: 30vh;
+  }
+}
+@media screen and (min-width: 1080px) {
+  * {
+    font-size: 14px;
+  }
+
+  .grids {
+    align-items: center;
+    padding: 5vh;
+    background-color: hsl(204, 100%, 50%, 0.7);
+
+    height: 100%;
+  }
+  .image > img {
+    max-width: 54%;
+    max-height: 45vh;
+    margin: auto;
+  }
+  .box {
+    position: static;
+    width: 90%;
+    height: 100%;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  .review {
+    max-width: 81%;
+    max-height: 63%;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 4vh;
+    padding: 4vh 2vh;
+  }
+
+  .images {
+    height: 54vh;
+    width: 100%;
+  }
+  .images > img {
+    margin-left: 25%;
+
+    left: 50%;
+    width: 50vh;
+    height: 50vh;
+  }
+  .score {
+    max-height: 100%;
+    text-align: center;
+  }
+  .score > h1 {
+    font-size: 3.6em;
+    margin: 1vh;
+    color: #422057ff;
+  }
+  .score > h2 {
+    font-size: 2em;
+    margin: 1vh;
+  }
+  .score > img {
+    max-height: 36%;
+    max-width: 36%;
+    border-radius: 50%;
+    margin-top: 3vh;
+  }
+}

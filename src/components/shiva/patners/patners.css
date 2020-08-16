@@ -1,0 +1,107 @@
+.container12 {
+  position: relative;
+  width: 100%;
+  height: 20vh;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+}
+.heading > h1 {
+  position: relative;
+  margin: 7vh auto;
+  color: #0099ff;
+  text-align: center;
+  font-size: 2.3em;
+}
+.heading > h1 > b {
+  color: #000000;
+  text-align: center;
+  font-size: 1em;
+}
+.main-container44 {
+  position: relative;
+  width: 80%;
+
+  margin: 3vh auto;
+  margin-top: 40px;
+  margin-bottom: 70px;
+}
+.item {
+  width: 70%;
+  margin: 20px auto;
+  position: relative;
+  display: grid;
+
+  transition: transform 500ms;
+}
+
+.container12 .item:focus,
+.container12 .item:hover {
+  transform: scale(1.5);
+  box-shadow: -3px -3px 7px white, 2px 2px 9px #000000;
+  z-index: 1;
+}
+
+.item img {
+  display: block;
+  max-width: 100%;
+  margin: auto;
+  background-color: white;
+}
+@media only screen and (max-width: 400px) {
+  .container12 {
+    width: 100%;
+    margin: 0px;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .item img {
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .container12 {
+    width: 90%;
+    height: fit-content;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .item img {
+    display: block;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .container12 {
+    width: 90%;
+    height: fit-content;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .item img {
+    display: block;
+    max-width: 100%;
+    margin: 0px auto;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .container12 {
+    width: 90%;
+    height: fit-content;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .item img {
+    display: block;
+    max-width: 100%;
+    margin: 0px auto;
+  }
+}

@@ -1,9 +1,9 @@
 import React, { useCallback, useState } from "react";
+import { Link } from "react-router-dom";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import TextField from "@material-ui/core/TextField";
-import Link from "@material-ui/core/Link";
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
@@ -13,7 +13,6 @@ import Container from "@material-ui/core/Container";
 import { withRouter } from "react-router";
 import base from "../../config/FbConfig";
 import Paper from "@material-ui/core/Paper";
-import firestore from "firebase/firestore";
 
 function Copyright() {
   return (
@@ -24,8 +23,8 @@ function Copyright() {
       style={{ padding: "1vh" }}
     >
       {"Copyright © "}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+      <Link color="inherit" href="#" style={{ textDecoration: "none" }}>
+        AVASYU
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
@@ -56,10 +55,13 @@ const useStyles = makeStyles((theme) => ({
 const Signup = ({ history }) => {
   const classes = useStyles();
   const [data, setState] = useState({
+    userName: "",
     firstName: "",
     lastName: "",
     email: "",
     mobile: "",
+    college: "",
+    state: "",
   });
 
   const updateField = (e) => {
@@ -74,30 +76,50 @@ const Signup = ({ history }) => {
     async (event) => {
       event.preventDefault();
       const {
+        userName,
         firstName,
         lastName,
         email,
         mobile,
         password,
+        college,
+        state,
       } = event.target.elements;
       const db = base.firestore();
-
-      console.log(firstName + lastName + email + mobile + password);
+      var users = null;
+      // console.log(firstName + lastName + email + mobile + password);
       try {
         await base
           .auth()
           .createUserWithEmailAndPassword(email.value, password.value)
           .then((cred) => {
-            return db.collection("UserData").doc(cred.user.uid).set({
-              firstName: firstName.value,
-              lastName: lastName.value,
-              email: email.value,
-              mobile: mobile.value,
+            users = cred.user;
+            users.sendEmailVerification();
+            users.updateProfile({
+              displayName: userName.value,
             });
           })
-          .then(() => {
-            history.push("/");
+          .then((cred) => {
+            return db
+              .collection("UserDataInter")
+              .doc(users.uid)
+              .set({
+                firstName: firstName.value,
+                lastName: lastName.value,
+                email: email.value,
+                mobile: mobile.value,
+                college: college.value,
+                state: state.value,
+              })
+              .then(() => {
+                alert(
+                  `Hey ${
+                    firstName.value + " " + lastName.value
+                  } ...! You are now a part of AVASYU`
+                );
+              });
           });
+        history.push("/");
       } catch (error) {
         alert(error.message);
       }
@@ -124,6 +146,19 @@ const Signup = ({ history }) => {
           </Typography>
           <form className={classes.form} onSubmit={handleSignUp} validate>
             <Grid container spacing={2}>
+              <Grid item xs={12} sm={12}>
+                <TextField
+                  autoComplete="uName"
+                  value={data.userName}
+                  name="userName"
+                  onChange={updateField}
+                  required
+                  fullWidth
+                  id="userName"
+                  label="User Name"
+                  autoFocus
+                />
+              </Grid>
               <Grid item xs={12} sm={6}>
                 <TextField
                   autoComplete="fname"
@@ -185,14 +220,32 @@ const Signup = ({ history }) => {
                   autoComplete="current-password"
                 />
               </Grid>
-              {/* <Grid item xs={12}>
-                <FormControlLabel
-                  control={
-                    <Checkbox value="allowExtraEmails" color="primary" />
-                  }
-                  label="I want to receive inspiration, marketing promotions and updates via email."
+              <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  id="college"
+                  label="College/Oraganization/School"
+                  value={data.college}
+                  name="college"
+                  onChange={updateField}
+                  type="college"
+                  autoComplete="college"
                 />
-              </Grid> */}
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  id="state"
+                  label="State"
+                  value={data.state}
+                  name="state"
+                  onChange={updateField}
+                  type="state"
+                  autoComplete="state"
+                />
+              </Grid>
             </Grid>
             <Button
               type="submit"
@@ -206,9 +259,8 @@ const Signup = ({ history }) => {
             <Grid container justify="flex-end">
               <Grid item>
                 <Link
-                  href="/login"
-                  variant="body2"
-                  style={{ cursor: "pointer" }}
+                  to="/login"
+                  style={{ cursor: "pointer", textDecoration: "none" }}
                 >
                   Already have an account? Sign in
                 </Link>

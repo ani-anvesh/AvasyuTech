@@ -73,14 +73,13 @@ const QuesPor = ({ history }) => {
       })
       .then(() => {
         alert("Question Added to database, please refresh the browser");
-        ani.reset();
       })
       .then()
       .catch((error) => {
-        console.error("Error adding document: ", error);
+        //console.error("Error adding document: ", error);
       });
   };
-  console.log(ques);
+  //console.log(ques);
 
   return (
     <Container maxWidth="md" style={{ padding: "3vh" }}>

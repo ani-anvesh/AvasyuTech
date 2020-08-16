@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.proPap {
+  max-width: 100%;
+  margin: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.protype {
+  margin: 3vh 7vh;
+  padding: 2vh;
+  max-width: 100%;
+}
+.protype > b {
+  padding: 0vh 3vh;
+  color: #0099ff;
+  font-weight: bolder;
+  font-size: 3.6vh;
+  letter-spacing: 1.4px;
+}
+.proPap > img {
+  margin: 1vh 2vh;
+  max-width: 54%;
+  max-height: 54%;
+  border-bottom: 2px solid black;
+}
+.proGid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.shake-vertical {
+  -webkit-animation: shake-vertical 7s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+    infinite both;
+  animation: shake-vertical 7s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite
+    both;
+}
+
+@-webkit-keyframes shake-vertical {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  80% {
+    -webkit-transform: translateY(6.4px);
+    transform: translateY(6.4px);
+  }
+  90% {
+    -webkit-transform: translateY(-6.4px);
+    transform: translateY(-6.4px);
+  }
+}
+@keyframes shake-vertical {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  80% {
+    -webkit-transform: translateY(6.4px);
+    transform: translateY(6.4px);
+  }
+  90% {
+    -webkit-transform: translateY(-6.4px);
+    transform: translateY(-6.4px);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .proGid {
+    padding: 3vh;
+  }
+  .protype {
+    margin: 3vh 0vh;
+    padding: 2vh;
+  }
+  .protype > b {
+    padding: 0vh 1vh;
+    color: #0099ff;
+    font-weight: bolder;
+    font-size: 2.7vh;
+    letter-spacing: 1.4px;
+  }
+  .proPap {
+    max-width: 100%;
+    margin: 5vh;
+    padding: 3vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

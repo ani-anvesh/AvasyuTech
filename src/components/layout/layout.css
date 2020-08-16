@@ -1,0 +1,281 @@
+* {
+  font-family: Roboto;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.rooter {
+  margin: 7vh 0vh 0vh 0vh;
+  padding: 5vh 7vh 5vh 7vh;
+  background-image: url(../../appjs.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.events {
+  height: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.events > img {
+  height: 100%;
+  width: 100%;
+}
+
+.paps {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.papS {
+  margin: 1.2vh;
+  padding: 0.7vh 3vh;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.papJO {
+  height: 48vh;
+  width: 100%;
+  overflow-y: scroll;
+  padding: 2.1vh 1.6vh;
+}
+
+.papJ {
+  margin: 1.4vh;
+  padding: 1vh 3vh;
+}
+.papS:hover {
+  background-color: #0099ff;
+  color: "#ffffff";
+}
+.papS:active {
+  background-color: #ff6600;
+}
+
+.pap {
+  max-height: 100%;
+  max-width: 100%;
+  margin: 5vh 3vh;
+  padding: 5vh 1vh;
+}
+.conter {
+  position: relative;
+  padding: 20px;
+}
+.pap1 {
+  max-height: 100%;
+  max-width: 100%;
+  margin: 5vh 3vh;
+  padding: 5vh 1vh;
+}
+.paps h2 {
+  position: absolute;
+  top: -34px;
+  right: 1px;
+  margin: 0;
+  padding: 0;
+  font-size: 9em;
+  color: #ff6600;
+  opacity: 0.05;
+  transition: all 0.5s ease-in-out;
+}
+.instr2 {
+  display: none;
+}
+
+.paps:hover .conter h2 {
+  top: -61px;
+  transform: scale(1.08);
+}
+.pack {
+  text-align: center;
+}
+.conter .pack {
+  font-weight: bolder;
+  letter-spacing: 3px;
+  padding: 1vh;
+  border-bottom: 2px solid black;
+}
+.conter .pack::first-letter {
+  color: red;
+  font-size: larger;
+}
+.conter > h1 {
+  font-size: 1.4em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding: 2vh 0vh;
+  text-align: center;
+}
+.conter ul {
+  text-align: center;
+  list-style: none;
+}
+.conter > ul > li {
+  text-align: center;
+  padding: 0.7vh;
+  font-weight: bold;
+  letter-spacing: 1.8px;
+}
+.paps:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: #0099ff;
+  opacity: 0.05;
+}
+.instPap {
+  margin: 3vh;
+  padding: 2vh;
+  height: 86vh;
+  overflow-y: scroll;
+}
+.instPap .typer {
+  text-justify: inter-word;
+  text-align: justify;
+  margin: 1.6vh;
+  font-weight: bold;
+  letter-spacing: 1.4px;
+}
+.instPap .typer1 {
+  text-align: center;
+  padding: 2vh;
+  border-bottom: 1px solid black;
+  font-weight: bolder;
+  letter-spacing: 2.7px;
+  color: #0099ff;
+}
+.instPap::-webkit-scrollbar {
+  display: none;
+}
+.mengid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5vh;
+}
+.menpap {
+  max-height: 100%;
+  max-width: 100%;
+  padding: 0.9vh;
+}
+.menpap > img {
+  height: 34vh;
+  width: 52vw;
+  border-radius: 5px;
+}
+.mentype {
+  width: 52vw;
+  max-height: 100%;
+  padding: 3vh 0vh 0.7vh 0vh;
+}
+
+@media only screen and (min-width: 540px) {
+  * {
+    font-size: 16px;
+  }
+
+  .instPap .typer {
+    margin: 3vh;
+  }
+  .instPap {
+    margin: 3vh;
+    padding: 5vh;
+  }
+  .instPap .typer1 {
+    padding: 2vh;
+  }
+  .instGrid {
+    height: 100vh;
+  }
+
+  .pap {
+    max-height: 100%;
+    max-width: 100%;
+    margin: 5vh;
+    padding: 5vh 3v;
+  }
+  .pap1 {
+    max-height: 100%;
+    max-width: 100%;
+    margin: 5vh;
+    padding: 5vh 3vh;
+  }
+  .instr2 {
+    display: block;
+    padding-top: 5vh;
+  }
+  .menpap > img {
+    min-width: 25vw;
+    max-width: 27vw;
+  }
+  .mentype {
+    min-width: 25vw;
+    max-width: 27vw;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .menpap > img {
+    width: 16vw;
+  }
+  .mentype {
+    width: 16vw;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  * {
+    font-size: 16px;
+  }
+  .papJO {
+    height: 63vh;
+    overflow-y: scroll;
+    padding: 2.1vh 1.6vh;
+  }
+
+  .instPap .typer {
+    margin: 3vh;
+  }
+  .instPap {
+    margin: 3vh;
+    padding: 5vh;
+  }
+  .instPap .typer1 {
+    padding: 2vh;
+  }
+  .instGrid {
+    height: 100vh;
+  }
+
+  .pap {
+    max-height: 100%;
+    max-width: 100%;
+    margin: 5vh;
+    padding: 7vh 3vh;
+  }
+  .pap1 {
+    max-height: 100%;
+    max-width: 100%;
+    margin: 5vh;
+    padding: 7vh 3vh;
+  }
+  .instr2 {
+    display: block;
+    padding-top: 5vh;
+  }
+  .menpap > img {
+    min-width: 16vw;
+    max-width: 18vw;
+  }
+  .mentype {
+    min-width: 16vw;
+    max-width: 18vw;
+  }
+}

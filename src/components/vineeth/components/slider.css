@@ -1,0 +1,12 @@
+.slider{
+    width: 90%;
+    height: 65vh;
+    margin: 10px auto;
+    background-color:white;
+    
+}
+@media only screen and (max-width: 600px){
+    .slider{
+        height: 75vh;
+    }
+}

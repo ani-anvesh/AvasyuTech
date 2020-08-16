@@ -1,0 +1,36 @@
+.vi-main{
+    width: 100%;
+    height: 50vh;
+
+}
+.vi-submain12{
+    height: 45vh;
+    margin: 2vh 2vh;
+    background-image: url('../images/47.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    border-radius: 15px;
+}
+.vi-halfcard{
+    width: 100%;
+    height: 32%;
+    background-color: whitesmoke;
+    transform: translateY(215%);
+    border-bottom-left-radius:  15px;
+    border-bottom-right-radius:  15px;
+     
+}
+.vi-halfcard h1{
+    color: red;
+    font-size: 30px;
+    font-weight: 400;
+padding: 10px 0px;
+margin: 0px 0px;
+}
+.vi-halfcard > h2{
+    color: gray;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0px 0px;
+}

@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.abRoot {
+  background-image: url(../../../appjs.png);
+  background-size: 100%;
+  padding: 5vh 0vh;
+}
+.about30 {
+  padding: 30px;
+}
+.about33 img {
+  width: 70%;
+  height: 90%;
+}
+.about2 {
+  padding: 10px;
+  padding-top: 20px;
+}
+.about2 p {
+  color: grey;
+  font-size: large;
+  line-height: 1.65em;
+}
+.nag {
+  width: 100%;
+  text-align: center;
+  font-size: 45px;
+}
+.nag b {
+  color: #0099ff;
+  font-size: 5vh;
+}
+.para > p {
+  width: 100%;
+  text-align: center;
+  color: grey;
+}
+.about1 {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin: 20px auto;
+}
+
+.about2 p {
+  text-align: justify;
+}
+
+.us1 h2 {
+  font-size: 25px;
+  text-align: start;
+  border-bottom: 1px solid #0099ff;
+}
+.us1 h2 b {
+  font-size: 25px;
+  color: #0099ff;
+}
+
+.us1 p {
+  color: grey;
+  text-align: justify;
+  font-size: 15px;
+}
+.us2 h2 {
+  font-size: 25px;
+  text-align: start;
+  border-bottom: 1px solid #0099ff;
+}
+.us2 h2 b {
+  font-size: 25px;
+  color: #0099ff;
+}
+
+.us2 p {
+  color: grey;
+  text-align: justify;
+  font-size: 15px;
+}
+.us3 h2 {
+  font-size: 25px;
+  text-align: start;
+  border-bottom: 1px solid #0099ff;
+}
+.us3 h2 b {
+  font-size: 25px;
+  color: #0099ff;
+}
+
+.us3 p {
+  color: grey;
+  text-align: justify;
+  font-size: 15px;
+}
+.us {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-gap: 5%;
+  margin: 10px auto;
+}
+.abRoot {
+  padding-bottom: 3vh;
+  max-height: 100%;
+}
+
+@media (max-width: 800px) {
+  .about1 {
+    display: block;
+  }
+  .about2 {
+    margin-left: auto;
+    margin-right: 0px;
+    width: auto;
+  }
+  .about3 img {
+    display: none;
+  }
+  .para {
+    color: grey;
+    line-height: 1.6em;
+  }
+  .us {
+    display: grid;
+    grid-template-columns: 100%;
+    margin-top: 30px;
+  }
+  .us1 {
+    width: auto;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .us2 {
+    width: auto;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .us3 {
+    width: auto;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media (max-width: 600px) {
+  .us {
+    display: grid;
+    grid-template-columns: 100%;
+    margin-top: 30px;
+  }
+  .about30 {
+    display: none;
+  }
+  .abRoot {
+    margin-bottom: 9vh;
+  }
+}

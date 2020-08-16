@@ -1,0 +1,309 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+h1 {
+  font-weight: bolder;
+  font-size: 3.6vh;
+  color: #000000;
+  text-align: center;
+}
+.bro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3vh;
+}
+.vi-bb1 {
+  position: absolute;
+  background-image: url("../images/bg24.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 92%, 0 60%);
+}
+
+.vi-grid00 {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.vi-bb1 img {
+  float: right;
+  margin-top: 70px;
+}
+.vi-grid001 {
+  max-width: 50%;
+}
+.vi-grid001 > h3 {
+  font-size: 2.5em;
+  font-weight: bold;
+  letter-spacing: 1.8px;
+  color: #0099ff;
+  text-align: center;
+}
+.vi-grid001 > h2 {
+  font-size: 1.6rem;
+  color: #ffffff;
+  text-align: center;
+}
+.vi-servicesmain {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.vi-gridmain120 {
+  position: relative;
+  width: 100%;
+  height: 200vh;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 30% 30% 30%;
+}
+.vi-grid11 {
+  position: relative;
+  display: grid;
+  margin: 20px;
+  border: 2px transparent solid;
+  grid-template-columns: 30% 40%;
+}
+.vi-grid11 > .vi-grid111 > h1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.vi-grid11 > .vi-grid112 > h1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.vi-grid11 > .vi-grid111 > h1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.vi-grid12 > .vi-grid121 > h1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.vi-grid12 > .vi-grid122 > h1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.vi-grid13 > .vi-grid131 > h1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.vi-grid13 > .vi-grid132 > h1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.vi-grid111 {
+  position: relative;
+  background-color: whitesmoke;
+  padding: 20px;
+  margin: 10px;
+  display: grid;
+  border-radius: 15px;
+  grid-template-rows: 50% 50%;
+}
+.vi-grid111 img {
+  margin: 1px auto;
+}
+.vi-grid112 img {
+  margin: 1px auto;
+}
+.vi-grid121 img {
+  margin: 1px auto;
+}
+.vi-grid122 img {
+  margin: 1px auto;
+}
+.vi-grid131 img {
+  margin: 1px auto;
+}
+.vi-grid132 img {
+  margin: 1px auto;
+}
+.vi-grid111:hover {
+  background-color: #0099ff;
+  color: white;
+}
+.vi-grid112 {
+  background-color: whitesmoke;
+  padding: 20px;
+  margin: 10px;
+  margin-bottom: 0px;
+  border-radius: 15px;
+}
+.vi-grid112:hover {
+  background-color: #0099ff;
+  color: white;
+}
+
+.vi-grid12 {
+  position: relative;
+  display: grid;
+  margin: 20px;
+  border: 2px transparent solid;
+  grid-template-columns: 70% 30%;
+}
+.vi-grid121 {
+  position: relative;
+  background-color: whitesmoke;
+
+  padding: 20px;
+  margin: 10px;
+  border-radius: 15px;
+}
+.vi-grid121:hover {
+  background-color: #0099ff;
+  color: white;
+}
+.vi-grid122 {
+  position: relative;
+  background-color: whitesmoke;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 15px;
+}
+.vi-grid122:hover {
+  background-color: #0099ff;
+  color: white;
+}
+.vi-grid13 {
+  position: relative;
+  display: grid;
+  margin: 20px;
+  border: 2px transparent solid;
+  grid-template-columns: 30% 70%;
+}
+.vi-grid131 {
+  position: relative;
+  background-color: whitesmoke;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 15px;
+}
+.vi-grid131:hover {
+  background-color: #0099ff;
+  color: white;
+}
+.vi-grid132 {
+  position: relative;
+  background-color: whitesmoke;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 15px;
+}
+.vi-grid132:hover {
+  background-color: #0099ff;
+  color: white;
+}
+@media only screen and (max-width: 400px) {
+  .vi-gridmain120 {
+    display: grid;
+    grid-template-rows: 70%;
+    height: 200vh;
+  }
+
+  .vi-grid00 {
+    margin: 10px;
+  }
+  .vi-grid001 {
+    max-width: 100%;
+    margin: 0;
+  }
+  .vi-grid001 > h3 {
+    max-width: 100%;
+    font-size: 2.5em;
+    text-align: center;
+  }
+  .vi-grid001 > h2 {
+    max-width: 100%;
+    font-size: 1.2em;
+    padding: 2px;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 3vh;
+  }
+  .vi-grid11 {
+    position: relative;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .vi-grid12 {
+    position: relative;
+    height: fit-content;
+
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .vi-grid13 {
+    position: relative;
+    height: fit-content;
+
+    display: grid;
+    grid-template-columns: 100%;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .vi-grid00 {
+    height: 40vh;
+  }
+
+  .vi-gridmain120 {
+    display: grid;
+    grid-template-rows: 60%;
+    height: 200vh;
+  }
+
+  .vi-grid00 {
+    max-width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .vi-grid001 {
+    max-width: 100%;
+    margin: 2.7vh;
+  }
+  .vi-grid001 > h3 {
+    max-width: 100%;
+    font-size: 5vh;
+    text-align: center;
+  }
+  .vi-grid001 > h2 {
+    max-width: 100%;
+    font-size: 3vh;
+    padding: 2px;
+    margin-bottom: 1vh;
+    color: #000000;
+    text-justify: inter-word;
+    text-align: justify;
+  }
+  .vi-grid11 {
+    position: relative;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .vi-grid12 {
+    position: relative;
+    height: fit-content;
+
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .vi-grid13 {
+    position: relative;
+    height: fit-content;
+
+    display: grid;
+    grid-template-columns: 100%;
+  }
+}

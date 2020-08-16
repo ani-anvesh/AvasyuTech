@@ -1,12 +1,17 @@
-import React, { useCallback, useContext } from "react";
-import { withRouter, Redirect } from "react-router";
+import React, { useCallback, useContext, useState } from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  withRouter,
+} from "react-router-dom";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import TextField from "@material-ui/core/TextField";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
-import Link from "@material-ui/core/Link";
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 import Paper from "@material-ui/core/Paper";
@@ -16,6 +21,14 @@ import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import base from "../../config/FbConfig";
 import { AuthContext } from "../../config/auth";
+import clsx from "clsx";
+import IconButton from "@material-ui/core/IconButton";
+import Input from "@material-ui/core/Input";
+import InputLabel from "@material-ui/core/InputLabel";
+import InputAdornment from "@material-ui/core/InputAdornment";
+import FormControl from "@material-ui/core/FormControl";
+import Visibility from "@material-ui/icons/Visibility";
+import VisibilityOff from "@material-ui/icons/VisibilityOff";
 
 function Copyright() {
   return (
@@ -42,6 +55,15 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems: "center",
   },
+  margin: {
+    marginTop: theme.spacing(1),
+  },
+  withoutLabel: {
+    marginTop: theme.spacing(3),
+  },
+  textField: {
+    width: "100%",
+  },
   avatar: {
     margin: theme.spacing(2),
     backgroundColor: theme.palette.secondary.main,
@@ -55,7 +77,16 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Login = ({ history }) => {
+const Login = ({ history, component: RouteComponent, ...rest }) => {
+  const [showPassword, setShowPassword] = useState(false);
+
+  const handleClickShowPassword = () => {
+    setShowPassword(!showPassword);
+  };
+
+  const handleMouseDownPassword = (event) => {
+    event.preventDefault();
+  };
   const handleLogin = useCallback(
     async (event) => {
       event.preventDefault();
@@ -63,7 +94,10 @@ const Login = ({ history }) => {
       try {
         await base
           .auth()
-          .signInWithEmailAndPassword(email.value, password.value);
+          .signInWithEmailAndPassword(email.value, password.value)
+          .then(() => {
+            alert("Hey User...! Welcome back, glad you are here");
+          });
         history.push("/");
       } catch (error) {
         alert(error.message);
@@ -88,10 +122,6 @@ const Login = ({ history }) => {
 
   const classes = useStyles();
   const { currentUser } = useContext(AuthContext);
-
-  if (currentUser) {
-    return <Redirect to="/" />;
-  }
 
   return (
     <Container component="main" maxWidth="xs">
@@ -121,16 +151,32 @@ const Login = ({ history }) => {
               autoComplete="email"
               autoFocus
             />
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              name="password"
-              label="Password"
-              type="password"
-              id="password"
-              autoComplete="current-password"
-            />
+            <FormControl className={clsx(classes.margin, classes.textField)}>
+              <InputLabel htmlFor="standard-adornment-password">
+                Password
+              </InputLabel>
+              <Input
+                id="password"
+                margin="normal"
+                required
+                fullWidth
+                name="password"
+                label="Password"
+                autoComplete="current-password"
+                type={showPassword ? "text" : "password"}
+                endAdornment={
+                  <InputAdornment position="end">
+                    <IconButton
+                      aria-label="toggle password visibility"
+                      onClick={handleClickShowPassword}
+                      onMouseDown={handleMouseDownPassword}
+                    >
+                      {showPassword ? <Visibility /> : <VisibilityOff />}
+                    </IconButton>
+                  </InputAdornment>
+                }
+              />
+            </FormControl>
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
@@ -151,12 +197,10 @@ const Login = ({ history }) => {
                 </Link>
               </Grid>
               <Grid md={12} xs={12}>
-                <Link
-                  href="/register"
-                  variant="body2"
-                  style={{ cursor: "pointer" }}
-                >
-                  {"Don't have an account? Sign Up"}
+                <Link to="/register" style={{ textDecoration: "none" }}>
+                  <li style={{ listStyle: "none" }}>
+                    Don't have an account? Sign Up
+                  </li>
                 </Link>
               </Grid>
             </Grid>

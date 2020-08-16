@@ -1,0 +1,19 @@
+.vi-contento{
+    width: 70%;
+    height: 25vh;
+    margin: auto;
+}
+.vi-contento > p{
+    width: 70%;
+    margin: 10px auto;
+}
+.vi-contento > p > span > b12{
+    font-size: 20px;
+    font-weight: 700;
+    color:rgb(255, 109, 52);
+}
+.vi-contento > p > span > h3 {
+    font-size: 50px;
+    font-weight: 500;
+    color: black;
+}

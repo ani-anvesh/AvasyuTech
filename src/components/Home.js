@@ -1,13 +1,29 @@
 import React from "react";
-import base from "../config/FbConfig";
-import QuesPor from "./utils/QuesPor";
+import "./Home.css";
+import Package from "./layout/Package";
+import HomePage from "./HomePage";
+import Partners from "./shiva/patners/Patners";
+import Why from "./vineeth/Why";
+import Assess from "./vineeth/components/asses/Assess";
+import Index from "./vineeth/footer/index";
+import Mentors from "./layout/Mentors";
+import About from "./shiva/about/About";
+import Slider from "./layout/Slider";
+import Events from "./layout/event";
 
 export default function Home() {
   return (
-    <div>
-      <h1>anvesh</h1>
-      <QuesPor />
-      <button onClick={() => base.auth().signOut()}>Sign Out</button>
+    <div style={{ backgroundColor: "#FFFFFF" }}>
+      <HomePage />
+      <Slider />
+      <Events />
+      <Why />
+      <About />
+      <Package />
+      <Mentors />
+      <Assess />
+      <Partners />
+      <Index />
     </div>
   );
 }

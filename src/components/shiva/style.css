@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.Peps {
+  max-height: 100%;
+  max-width: 100%;
+  margin: 5vh 0vh;
+  font-size: 1em;
+  padding: 1.8vh;
+}
+.Peps > img {
+  height: 45vh;
+  width: 79vw;
+  border-radius: 9px;
+}
+.pepsN {
+  width: 79vw;
+  max-height: 100%;
+}
+.pepsE {
+  width: 79vw;
+  max-height: 100%;
+}
+
+@media only screen and (min-width: 990px) {
+  .border {
+    width: 50px;
+    height: 5px;
+    display: block;
+    margin: auto;
+    background: #0099ff;
+    position: relative;
+  }
+  .Peps {
+    max-height: 100%;
+    max-width: 100%;
+    margin: 5vh;
+    padding: 1.8vh;
+  }
+  .Peps > img {
+    height: 45vh;
+    width: 21vw;
+    border-radius: 9px;
+  }
+  .pepsN {
+    font-weight: bolder;
+    letter-spacing: 1.8px;
+    color: #0099ff;
+    padding: 2.3vh;
+    width: 21vw;
+    max-height: 100%;
+  }
+  .pepsE {
+    font-weight: bolder;
+    letter-spacing: 1.8px;
+    color: #000000;
+    padding: 1vh;
+    width: 21vw;
+    max-height: 100%;
+  }
+}
